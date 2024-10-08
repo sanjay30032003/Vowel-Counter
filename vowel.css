@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.info {
+    padding: 10px;
+    height: 340px;
+    width: 280px;
+    margin-right: 180px;
+    background-color: black;
+    color: white;
+    overflow: auto; /* Ensures that content doesn't overflow the box */
+}
+
+.box {
+    position: relative;
+    width: 700px;
+    background-color: black;
+    border-radius: 20px;
+    border: 1px solid #ccc; /* Light border for visibility */
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.box h2 {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.box textarea {
+    width: 80%;
+    height: 250px;
+    resize: none;
+    border-radius: 20px;
+    border: 1px solid #ccc; /* Light border for visibility */
+    outline: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    background-color:white; 
+    color:black; /* White text for readability */
+}
+
+.box p {
+    color: white;
+    font-size: 2rem;
+    margin: 20px 0 0 0; /* Add margin to separate from textarea */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
+    width: 100%; /* Ensure the paragraph takes full width */
+    text-align: center; /* Center text inside the paragraph */
+}
+
+.box p span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    background-color: blue;
+    border-radius: 50%;
+    color: white; /* Ensure text inside the span is readable */
+    font-size: 1.5rem; /* Adjust font size for readability */
+}

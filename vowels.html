@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <link rel="stylesheet" href="vowel.css">
+</head>
+<body>
+    <div class="info"> 
+        <h2>What is Vowels ?</h2>
+        <p>Vowels are letters that represent speech sounds where air leaves the mouth without any blockage by the tongue, lips, or throat. The vowels in the alphabet are a, e, i, o, u, and sometimes y. All other letters in the English alphabet are consonants, which represent speech sounds where air is blocked somehow before leaving the mouth.
+            Even though they’re only a few letters, vowels are important in spelling, pronunciation, and grammar.</p>
+    </div>
+    <div class="box">
+        <h2>VOWEL COUNTER</h2>
+        <textarea name="textarea" id="vowel"></textarea>
+        <p>
+            Vowel <span id="vowelcount"> 0 </span>
+        </p>
+    </div>
+    <script>
+    function countVowels(text) {
+        const vowels = 'aeiou';
+        let count = 0;
+        for (let char of text.toLowerCase()) {
+            if (vowels.includes(char)) {
+                count++;
+            }
+        }
+        return count;
+    }
+    function updateVowelCount() {
+        const textArea = document.getElementById('vowel');
+        const vowelCountSpan = document.getElementById('vowelcount');
+        const vowelCount = countVowels(textArea.value);
+        vowelCountSpan.textContent = vowelCount;
+    }
+    document.getElementById('vowel').addEventListener('input', updateVowelCount);
+</script>
+</body>
+</html>
